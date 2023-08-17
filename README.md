@@ -79,8 +79,8 @@ since $f_{n+1}=X_{n+1} \circ f$ and  $(X_1, \ldots, X_{n+1})$ denotes the coordi
 Therefore one has the matrix $(\lambda) = \left ( \lambda^i_{j}\right )$ for the exact sequence of the
 $\mathcal O_{n+1}$-module $\mathcal O_{X,x}$. 
 
-$\mathcal O_{n+1}^p \stackrel{ \lambda } \longrightarrow \mathcal O_{n+1}^q
-\stackrel{\alpha} \longrightarrow \mathcal O_{X,x} \longrightarrow 0 $
+$$\mathcal O_{n+1}^p \stackrel{ \lambda } \longrightarrow \mathcal O_{n+1}^q
+\stackrel{\alpha} \longrightarrow \mathcal O_{X,x} \longrightarrow 0. $$
 
 If  $g_1,g_2,\ldots,g_h$ generate ${\mathcal O}_{X,x}$, we can consider  $g_1=1$, $q=p=h$ and the
 matrix $\alpha$ is given in such a way that $\alpha(e_i)=g_i$, where  $e_i$ is the  $i^{th}$ element of the usual basis.

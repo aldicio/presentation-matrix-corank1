@@ -94,8 +94,12 @@ For this case with $f$ in its pre-normal form is possible to get a presentation 
 and moreover we  present a fast implementation in Maple and Singular (prescorank1.lib) of the algorithm of Mond and Pellikaan, showing explicitly how to compute the elements of the polynomial presentation matrices for such maps.
 
 <br/>
+<br/>
+<br/>
 
-<strong>Example:</strong> Let $f:(\mathbb C^3,0)\to (\mathbb C^3,0)$ be defined by $f(x,y,z)=(x, y, z^6+xz+yz^2).$ We have that $\frac{\mathcal O_{ ( \Sigma ( f ), 0 )}}{f^*\mathfrak m_{(\mathbb C^3,0)}} \cong \frac{\mathbb C\{z\}}{z^5}$ and $\mathcal O_{( \Sigma(f),0) } $  is finitely generated as $\mathcal O_3$-module via $f^*$.
+<strong>Example:</strong> Let $f:(\mathbb C^3,0)\to (\mathbb C^3,0)$ be defined by $f(x,y,z)=(x, y, z^6+xz+yz^2).$ 
+<br/>
+We have that $\frac{\mathcal O_{ ( \Sigma ( f ), 0 )}}{f^*\mathfrak m_{(\mathbb C^3,0)}} \cong \frac{\mathbb C\{z\}}{z^5}$ and $\mathcal O_{( \Sigma(f),0) } $  is finitely generated as $\mathcal O_3$-module via $f^*$.
 <br/>
 How to obtain the matrix of a presentation for this map?
 <br/>

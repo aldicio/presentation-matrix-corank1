@@ -198,9 +198,9 @@ As $vdim(std(F2)) = 10$, then this germ has $10$ zero-stables singularities in a
 [1] D. Mond and R. Pellikaan, Fitting ideals and multiple points of analytic mappings. Algebraic geometry and complex analysis
 (Patzcuaro, 1987), 107--161, Lecture Notes in Math., Springer, Berlin, (1989), 1414.
 <br/>
-[2] Miranda, A. J., Saia, M. J., A presentation matrix associated to the discriminant of a co-rank one map germ from $\mathbb {C}^n$ to $\mathbb {C}^n$,
+[2] Miranda, A. J., Saia, M. J., <a href="https://bookstore.ams.org/view?ProductCode=CONM/675"> A presentation matrix associated to the discriminant of a co-rank one map germ from C^n to C^n</a>,
 Contemporary Mathematics, 675 (2016) 241-252.
-<a href="https://bookstore.ams.org/view?ProductCode=CONM/675"> A presentation matrix associated to the discriminant of a co-rank one map germ from $\mathbb {C}^n$ to $\mathbb {C}^n$</a>
+
 </p>
 </body>
 </html>

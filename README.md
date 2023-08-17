@@ -30,8 +30,7 @@ $${R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrigh
 of $R$-modules, when $M$ is finitely presented such a presentation always exists and $\lambda$ is called a presentation matrix of relations among the generators of the module.
 
 
-In general it is not easy to construct  a presentation, but when $(X,x)$ is the multi-germ of a Cohen-Macaulay variety of dimension $n$, Mond and Pellikaan in [1], showed an algorithm for constructing bla $\mathcal O_{n+1}$ blu the presentation $\mathcal O}_{n+1}$ ation of the ${\mathcal O}_{}$  ${\mathcal O}_{n+1}$-module ${\mathcal O}_{(X,x)}$ for finite analytic map germs
-$f:(X,x) \to ({\mathbb C}^{n+1},0)$.
+In general it is not easy to construct  a presentation, but when $(X,x)$ is the multi-germ of a Cohen-Macaulay variety of dimension $n$, Mond and Pellikaan in [1], showed an algorithm for constructing  the presentation $\mathcal O_{n+1}$-module ${\mathcal O}_{(X,x)}$ for finite analytic map germs $f:(X,x) \to ({\mathbb C}^{n+1},0)$.
 
 The main problem when using this algorithm is that you need to know some coefficients $\alpha_{j}^{i}$
 in order to construct the presentation, but this is not easy in general. In this paper we give an explicit construction of the coefficients
@@ -43,28 +42,23 @@ $f(x, z) = (x_1, \ldots , x_{n-1}, g(x, z))$, where $x = (x_1, \ldots , x_{n-1})
 ({\mathbb C},0)$ is a polynomial that can be written in the form $$g(x,z)=z^{k+1}+h(x,z),\ {\rm with} \ h(x,z)=h_{k-1}(x)z^{k-1}+h_{k-2}(x)z^{k-2}+\cdots h_{1}(x)z+h_0(x),$$ with
 $h_i(0)=0$ for all $h_i : ({\mathbb C}^{n}, 0) \to ({\mathbb C},0)$, $i=0,\ldots ,k-1$.
 
- The main importance of this construction is related to the study of
- the analytic invariants of the map germ $f$, given in terms of the multiple point schemes of its
-restriction to the critical locus of $f$, and these spaces can be computed
-by means of the Fitting ideals of the  presentation matrix.
+The main importance of this construction is related to the study of the analytic invariants of the map germ $f$, given in terms of the multiple point schemes of its
+restriction to the critical locus of $f$, and these spaces can be computed by means of the Fitting ideals of the  presentation matrix.
 
- Moreover  we implement this construction using the  software Maple and Singular, showing explicitly how to compute the elements of the matrix $\lambda$
- for such maps. Then we show how to apply this construction to obtain some invariants
- associated to the singularities of map germs in this ring.
-<br/>
+Moreover  we implement this construction using the  software Maple and Singular, showing explicitly how to compute the elements of the matrix $\lambda$  for such maps. Then we show how to apply this construction to obtain some invariants associated to the singularities of map germs in this ring. <br/>
 <br/>
 <strong>Procedure to obtain the presentation matrix $\lambda$</strong>
 <br/>
 <br/>
 We describe here the algorithm  given by Mond and Pellikaan in [Section 2.2, 1] to construct the presentation of any ${\mathcal O}_{n+1}$-module $f_{*}{\mathcal O}_{X}$.
 
-Denote by ${\mathcal O}_n$ the local ring of holomorphic function germs $h : ({\mathbb C}^n, 0) \to {\mathbb C}$  and ${\mathcal O}_{(n,n)}$ denotes the module of holomorphic map germs $f:({\mathbb C}^n, 0) \to {\mathbb C}^n$.
+Denote by $\mathcal O_n$ the local ring of holomorphic function germs $h : ({\mathbb C}^n, 0) \to {\mathbb C}$  and ${\mathcal O}_{(n,n)}$ denotes the module of holomorphic map germs $f:({\mathbb C}^n, 0) \to {\mathbb C}^n$.
 
 Let $(X,x)$ be  the multi-germ of a Cohen-Macaulay variety of dimension $n$ and $f:(X,x) \to ({\mathbb C}^{n+1},0)$ be the germ of a finite analytic map,
-by the Weierstrass preparation theorem it follows that ${\mathcal O}_{(X,x)}$ is a finite ${\mathcal O}_{n+1}$-module via the function $f^*$.
+by the Weierstrass preparation theorem it follows that $\mathcal O_{(X,x)}$ is a finite ${\mathcal O}_{n+1}$-module via the function $f^*$.
 
- To compute the matrix $\lambda$,  we remark that if the classes of $g_1,g_2,\ldots,g_h$ in $\frac{{\mathcal O}_{(X,x)}}{f^*{\mathfrak m}_0}$ generate it as a
-vector space over ${\mathbb C}$, then $g_1,g_2,\ldots,g_h$ generate ${\mathcal O}_{(X,x)}$ as an ${\mathcal O}_{n+1}$-module,
+To compute the matrix $\lambda$,  we remark that if the classes of $g_1, g_2,\ldots, g_h$ in $\frac{\mathcal O_{(X,x)}}{f^*{\mathfrak m_0}}$ generate it as a
+vector space over ${\mathbb C}$, then $g_1, g_2, \ldots, g_h$ generate $\mathcal O_{(X,x)}$ as an $\mathcal O_{n+1}$-module,
 therefore it is enough to obtain the relations among the $g_i$, $i=1,\ldots, h$ over ${\mathcal O}_{n+1}$.
 
 <br/>
@@ -75,21 +69,22 @@ After a change of coordinates we suppose that $f(x)=(\widetilde{f}(x), f_{n+1}(x
 ${\mathcal O}_{X,x}$ is a free  ${\mathcal O}_{n}$-module via $\widetilde{f}^*$.
 
 
-Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in {\mathcal O}_{n}$,  such that
-\begin{equation}\label{eq2}
+Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in \mathcal O_{n}$,  such that
+$$
 g_j\cdot f_{n+1}=\sum({\alpha_j^i \circ \widetilde{f}}) \cdot g_i.
-\end{equation}
+$$
 
-As the germs $g_i$ generate ${\mathcal O}_{X,x}$ over ${\mathcal O}_{n+1}$ via $f^*$, then
+As the germs $g_i$ generate $\mathcal O_{X,x}$ over $\mathcal O_{n+1}$ via $f^*$, then
 $$\lambda_j^i=\alpha_j^i \circ \pi, \ \ i\neq j$$
 $$\lambda_i^i=\alpha_i^i \circ \pi-X_{n+1},$$
 since $f_{n+1}=X_{n+1} \circ f$ and  $(X_1, \ldots, X_{n+1})$ denotes the coordinates of  ${\mathbb C}^{n+1}$ in the target.
 
-Therefore one has the matrix $(\lambda) = \left ( \lambda^{i}_{j}\right )$ for the exact sequence of the
-${\mathcal O}_{n+1}$-module ${\mathcal O}_{X,x}$. \begin{equation}\label{seqExata2}
-{\mathcal O}_{n+1}^{p} \stackrel{\lambda}{\longrightarrow} {\mathcal O}_{n+1}^{q}
+Therefore one has the matrix $(\lambda) = \left ( \lambda^i_{j}\right )$ for the exact sequence of the
+$\mathcal O_{n+1}$-module $\mathcal O_{X,x}$. 
+$$
+\mathcal O_{n+1}^{p} \stackrel{\lambda}{\longrightarrow} \mathcal O_{n+1}^{q}
 \stackrel{\alpha}\longrightarrow {\mathcal O}_{X,x} \longrightarrow 0
-\end{equation}
+$$
 
 If  $g_1,g_2,\ldots,g_h$ generate ${\mathcal O}_{X,x}$, we can consider  $g_1=1$, $q=p=h$ and the
 matrix $\alpha$ is given in such a way that $\alpha(e_i)=g_i$, where  $e_i$ is the  $i^{th}$ element of the usual basis.

@@ -90,13 +90,12 @@ matrix $\alpha$ is given in such a way that $\alpha(e_i)=g_i$, where  $e_i$ is t
 <strong>Implementation</strong>
 <br/>
 <br/>
-<a href="https://drive.google.com/open?id=1_kCkbZmlcVScKe8LNtbJuPITyOJKsDxQ">prescorank1.lib</a>
-<br/>
 <br/>
 For this case with $f$ in its pre-normal form is possible to get a presentation without use groebner bases, [2], 
 and moreover we  present a fast implementation in Maple and Singular (prescorank1.lib) of the algorithm of Mond and Pellikaan, showing explicitly how to compute the elements of the polynomial presentation matrices for such maps.
 <br/>
 <br/>
+$f:($
 <strong>Example:</strong>
 Let $f:(\mathbb C^3,0)\to (\mathbb C^3,0)$ be defined by $f(x,y,z)=(x, y, z^6+xz+yz^2).$ 
 <br/>We have that $\frac{\mathcal O_{ ( \Sigma ( f ), 0 )}}{f^*\mathfrak m_{(\mathbb C^3,0)}} \cong \frac{\mathbb C\{z\}}{z^5}$ and $\mathcal O_{( \Sigma(f),0) } $  is finitely generated as $\mathcal O_3$-module via $f^*$.

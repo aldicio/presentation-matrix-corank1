@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p {
-    font-size: 20px;
-	text-align: justify;
-}
-	ol{
-		font-size: 20px;
-		text-align: justify;
-	}
- </style>
-<!-- INICIO SCRIPT LATEX -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript">MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'],['[m]','[/m]']], displayMath: [['[mm]','[/mm]'],['$$','$$']]},
-  "HTML-CSS": { scale: 100, showMathMenu: false, minScaleAdjust: 100}
-});</script>
-<!-- FIM SCRIPT LATEX -->
 </head>
 <body>
 <h2>A presentation matrix associated to discriminant of co-rank one maps from ${\mathbb C}^n$ to ${\mathbb C}^n$.</h2>
@@ -40,10 +23,10 @@ Then we show how to apply this construction to obtain invariants associated to t
 <br/>
 A presentation of  an $R$-module $M$ ($R$, a commutative ring with unit)  is
 an exact sequence
-\begin{equation}\label{seqExata}
+$\begin{equation}\label{seqExata}
 {R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
 \longrightarrow 0
-\end{equation}
+\end{equation}$
 of $R$-modules, when $M$ is finitely presented such a presentation always exists and $\lambda$ is called a presentation matrix of relations among the generators of the module.
 
 

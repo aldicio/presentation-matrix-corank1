@@ -193,7 +193,9 @@ F2[10]=Y3
 	<li>$V(F_1) = A_{2}(f) \cup A_{1,1}(f)$ (cuspidal curve $\cup$ ordinary double points curve).</li>
 	<li>$V(F_2) = A_{3}(f) \cup A_{2,1}(f)\cup A_{1,1,1}(f)$ (swallowtail $\cup$ double fold with cuspidal points $\cup$ triple fold points).</li>
 	</ol>
-As $vdim(std(F2)) = 10$, then this germ has $10$ zero-stables singularities in a stable deformation.
+ 
+As $vdim(std(F2))=10$, then this germ has $10$ zero-stables singularities in a stable deformation.
+
 <p>
 [1] D. Mond and R. Pellikaan, Fitting ideals and multiple points of analytic mappings. Algebraic geometry and complex analysis
 (Patzcuaro, 1987), 107--161, Lecture Notes in Math., Springer, Berlin, (1989), 1414.

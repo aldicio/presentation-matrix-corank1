@@ -40,10 +40,10 @@ Then we show how to apply this construction to obtain invariants associated to t
 <br/>
 A presentation of  an $R$-module $M$ ($R$, a commutative ring with unit)  is
 an exact sequence
-\begin{equation}\label{seqExata}
+$$\begin{equation}\label{seqExata}
 {R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
 \longrightarrow 0
-\end{equation}
+\end{equation}$$
 of $R$-modules, when $M$ is finitely presented such a presentation always exists and $\lambda$ is called a presentation matrix of relations among the generators of the module.
 
 
@@ -95,9 +95,9 @@ ${\mathcal O}_{X,x}$ is a free  ${\mathcal O}_{n}$-module via $\widetilde{f}^*$.
 
 
 Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in {\mathcal O}_{n}$,  such that
-\begin{equation}\label{eq2}
+$$\begin{equation}\label{eq2}
 g_j\cdot f_{n+1}=\sum({\alpha_j^i \circ \widetilde{f}}) \cdot g_i.
-\end{equation}
+\end{equation}$$
 
 As the germs $g_i$ generate ${\mathcal O}_{X,x}$ over ${\mathcal O}_{n+1}$ via $f^*$, then
 $$\lambda_j^i=\alpha_j^i \circ \pi, \ \ i\neq j$$

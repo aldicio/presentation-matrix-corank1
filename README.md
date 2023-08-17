@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+p {
+    font-size: 20px;
+	text-align: justify;
+}
+	ol{
+		font-size: 20px;
+		text-align: justify;
+	}
+ </style>
+<!-- INICIO SCRIPT LATEX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'],['[m]','[/m]']], displayMath: [['[mm]','[/mm]'],['$$','$$']]},
+  "HTML-CSS": { scale: 100, showMathMenu: false, minScaleAdjust: 100}
+});</script>
+<!-- FIM SCRIPT LATEX -->
 </head>
 <body>
 <h2>A presentation matrix associated to discriminant of co-rank one maps from ${\mathbb C}^n$ to ${\mathbb C}^n$.</h2>
@@ -23,8 +40,10 @@ Then we show how to apply this construction to obtain invariants associated to t
 <br/>
 A presentation of  an $R$-module $M$ ($R$, a commutative ring with unit)  is
 an exact sequence
-$${R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
-\longrightarrow 0$$
+\begin{equation}\label{seqExata}
+{R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
+\longrightarrow 0
+\end{equation}
 of $R$-modules, when $M$ is finitely presented such a presentation always exists and $\lambda$ is called a presentation matrix of relations among the generators of the module.
 
 
@@ -43,11 +62,14 @@ $f(x, z) = (x_1, \ldots , x_{n-1}, g(x, z))$, where $x = (x_1, \ldots , x_{n-1})
 ({\mathbb C},0)$ is a polynomial that can be written in the form $$g(x,z)=z^{k+1}+h(x,z),\ {\rm with} \ h(x,z)=h_{k-1}(x)z^{k-1}+h_{k-2}(x)z^{k-2}+\cdots h_{1}(x)z+h_0(x),$$ with
 $h_i(0)=0$ for all $h_i : ({\mathbb C}^{n}, 0) \to ({\mathbb C},0)$, $i=0,\ldots ,k-1$.
 
-The main importance of this construction is related to the study of the analytic invariants of the map germ $f$, given in terms of the multiple point schemes of its
-restriction to the critical locus of $f$, and these spaces can be computed by means of the Fitting ideals of the  presentation matrix.
+ The main importance of this construction is related to the study of
+ the analytic invariants of the map germ $f$, given in terms of the multiple point schemes of its
+restriction to the critical locus of $f$, and these spaces can be computed
+by means of the Fitting ideals of the  presentation matrix.
 
  Moreover  we implement this construction using the  software Maple and Singular, showing explicitly how to compute the elements of the matrix $\lambda$
- for such maps. Then we show how to apply this construction to obtain some invariants  associated to the singularities of map germs in this ring.
+ for such maps. Then we show how to apply this construction to obtain some invariants
+ associated to the singularities of map germs in this ring.
 <br/>
 <br/>
 <strong>Procedure to obtain the presentation matrix $\lambda$</strong>
@@ -73,9 +95,9 @@ ${\mathcal O}_{X,x}$ is a free  ${\mathcal O}_{n}$-module via $\widetilde{f}^*$.
 
 
 Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in {\mathcal O}_{n}$,  such that
-$$
+\begin{equation}\label{eq2}
 g_j\cdot f_{n+1}=\sum({\alpha_j^i \circ \widetilde{f}}) \cdot g_i.
-$$
+\end{equation}
 
 As the germs $g_i$ generate ${\mathcal O}_{X,x}$ over ${\mathcal O}_{n+1}$ via $f^*$, then
 $$\lambda_j^i=\alpha_j^i \circ \pi, \ \ i\neq j$$

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <h2>A presentation matrix associated to discriminant of co-rank one maps from ${\mathbb C}^n$ to ${\mathbb C}^n$.</h2>
@@ -50,9 +48,9 @@ Moreover  we implement this construction using the  software Maple and Singular,
 <strong>Procedure to obtain the presentation matrix $\lambda$</strong>
 <br/>
 <br/>
-We describe here the algorithm  given by Mond and Pellikaan in [Section 2.2, 1] to construct the presentation of any ${\mathcal O}_{n+1}$-module $f_{*}{\mathcal O}_{X}$.
+We describe here the algorithm  given by Mond and Pellikaan in [1] to construct the presentation of any $\mathcal O_{n+1}$-module $f_{*}{\mathcal O}_{X}$.
 
-Denote by $\mathcal O_n$ the local ring of holomorphic function germs $h : ({\mathbb C}^n, 0) \to {\mathbb C}$  and ${\mathcal O}_{(n,n)}$ denotes the module of holomorphic map germs $f:({\mathbb C}^n, 0) \to {\mathbb C}^n$.
+Denote by $\mathcal O_n$ the local ring of holomorphic function germs $h : ({\mathbb C}^n, 0) \to {\mathbb C}$  and $\mathcal O_{(n,n)}$ denotes the module of holomorphic map germs $f:({\mathbb C}^n, 0) \to {\mathbb C}^n$.
 
 Let $(X,x)$ be  the multi-germ of a Cohen-Macaulay variety of dimension $n$ and $f:(X,x) \to ({\mathbb C}^{n+1},0)$ be the germ of a finite analytic map,
 by the Weierstrass preparation theorem it follows that $\mathcal O_{(X,x)}$ is a finite ${\mathcal O}_{n+1}$-module via the function $f^*$.
@@ -65,8 +63,8 @@ therefore it is enough to obtain the relations among the $g_i$, $i=1,\ldots, h$ 
 <br/>
 
 Choose a projection  $\pi:({\mathbb C}^{n+1},0) \to ({\mathbb C}^{n},0)$ such that $\widetilde{f}=\pi \circ f$ is also finite.
-After a change of coordinates we suppose that $f(x)=(\widetilde{f}(x), f_{n+1}(x))$ and as ${\mathcal O}_{X,x}$ is Cohen-Macaulay, then
-${\mathcal O}_{X,x}$ is a free  ${\mathcal O}_{n}$-module via $\widetilde{f}^*$.
+After a change of coordinates we suppose that $f(x)=(\widetilde{f}(x), f_{n+1}(x))$ and as $\mathcal O_{X,x}$ is Cohen-Macaulay, then
+$\mathcal O_{X,x}$ is a free  $\mathcal O_n$-module via $\widetilde{f}^*$.
 
 
 Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in \mathcal O_{n}$,  such that

@@ -200,7 +200,7 @@ As $vdim(std(F2)) = 10$, then this germ has $10$ zero-stables singularities in a
 <br/>
 [2] Miranda, A. J., Saia, M. J., A presentation matrix associated to the discriminant of a co-rank one map germ from $\mathbb {C}^n$ to $\mathbb {C}^n$,
 Contemporary Mathematics, 675 (2016) 241-252.
-	
+<a href="https://bookstore.ams.org/view?ProductCode=CONM/675"> A presentation matrix associated to the discriminant of a co-rank one map germ from $\mathbb {C}^n$ to $\mathbb {C}^n$</a>
 </p>
 </body>
 </html>

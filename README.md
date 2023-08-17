@@ -23,16 +23,14 @@ Then we show how to apply this construction to obtain invariants associated to t
 <br/>
 A presentation of  an $R$-module $M$ ($R$, a commutative ring with unit)  is
 an exact sequence
-$\begin{equation}\label{seqExata}
-{R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
-\longrightarrow 0
-\end{equation}$
+$${R}^{p} \stackrel{\lambda}{\longrightarrow} {R}^{q} \stackrel{\alpha}\longrightarrow {M}
+\longrightarrow 0$$
 of $R$-modules, when $M$ is finitely presented such a presentation always exists and $\lambda$ is called a presentation matrix of relations among the generators of the module.
 
 
 In general it is not easy to construct  a presentation, but when $(X,x)$ is the multi-germ of a
 Cohen-Macaulay variety of dimension $n$, Mond and Pellikaan in [1], showed an algorithm for constructing
-the presentation of the ${\mathcal O}_{n+1}$-module ${\mathcal O}_{(X,x)}$ for finite analytic map germs
+the presentation $\mathcal O}_{n+1}$ ation of the ${\mathcal O}_{}$  ${\mathcal O}_{n+1}$-module ${\mathcal O}_{(X,x)}$ for finite analytic map germs
 $f:(X,x) \to ({\mathbb C}^{n+1},0)$.
 
 The main problem when using this algorithm is that you need to know some coefficients $\alpha_{j}^{i}$

@@ -1,0 +1,152 @@
+///////////////////////////////////////////////////////////////////////////////
+version="$Id: prescorank1.lib 2016-10-02 $";
+category="Commutative Algebra";
+info="
+LIBRARY:  prescorank1.lib   Compute presentation matrix of corank 1 map from C^n to C^n
+AUTHORS:  Aldicio Jose Miranda,     aldicio@gmail.com,
+
+
+PROCEDURES:
+  prescorank1(ideal f);  Compute presentation matrix
+ 
+";
+
+LIB "matrix.lib";
+LIB "ring.lib";
+LIB "homolog.lib";
+
+
+//-------------------------------------------------------------------------------------------------
+proc prescorank1(ideal f)
+{
+option(noredefine);
+ int     tTotal=timer;  int tbegin=timer;                   
+ string  RSName=nameof(basering);               // name of source ring
+ ideal  If=ideal(f); //If;//ideal that define f
+ int sf=size(f);
+ execute("setring "+RSName); //go to source ring
+ int    dimF=nvars(basering);		      //dimF=dim.of source = number of vars of in source
+ if(sf!=dimF)
+   {
+     ERROR("The dimensions of the source and target are not equal.Verify input!");
+   }
+
+
+ poly J=det(jacob(If));//J;//print("size J=");size(J);
+ ideal J1=ideal(J);
+ 
+ if(reduce(1,J1)==0)
+   {
+     ERROR("No singularity. Verify input!");
+   }
+
+   if(J==0)
+   {
+     ERROR("Verify input!");
+   }  
+
+ ideal K=kbase(std(If+J)); int nGer=size(K);  poly Iz=J;poly IzAux=J;
+
+ for (int i=1;i< dimF;i++)
+   {
+      Iz= subst(Iz,var(i),0);
+      IzAux= subst(IzAux,var(i),1);
+   }  
+ 
+ if(size(Iz)> 1)//avoid f of type (x,y,z5+z4+xz2+yz)
+   {
+     ERROR("The map germ ("+string(f)+") is not in pre-normal form. Verify input!");
+   }
+
+ if(deg(Iz)!=deg(IzAux))
+   {
+     ERROR("The map germ ("+string(f)+") is not in pre-normal form. Verify input!");
+   }
+ 
+ 
+int aux1= size(coeffs(J,var(dimF))[deg(Iz)+1,1]);//avoid f of type (x,y,xz4+z4+xz+y2); Neste caso nao   possivel isolar z^3
+  
+if( aux1> 1)
+   {
+     ERROR("The map germ ("+string(f)+") is not in pre-normal form. Verify input!");
+   }
+
+ int d=deg(Iz); 
+
+ poly coefi = coef(Iz,var(dimF))[2,1];
+ Iz= -(J-Iz)/coefi; 
+ poly Izz=Iz*var(dimF); //aqui ja estou usando modulo jacobiano
+ poly t=-If[dimF]+var(dimF)^d-Izz;
+ matrix Pres[nGer][nGer];
+
+ matrix M,N;  int sM;
+
+ for (int k=1; k <= (nGer);k++)
+   {
+     M = coef(t,var(dimF));
+    sM = (size(M) div 2);
+     
+      if (deg(M[1,1])<nGer)
+          {        
+             for (int j=1;j<=sM;j++)
+                { 
+           	 Pres[k,deg(M[1,j])+1]=M[2,j];
+                } 
+	     t=t*var(dimF);
+          }
+      else
+	{
+	  t=t-M[1,1]*M[2,1]+M[2,1]*Iz;
+          k--;
+	}
+   }
+
+//-----------------------------------------------------------------------------
+ string  varY; int truY; list L;
+ varY="Y"; truY=0;
+
+ for(int i=1; i<=dimF-1; i++)
+   {
+     L[i]=var(i);
+   }
+    for (int n=1; n<= dimF; n++)
+     {
+       for (int j=1; j<= dimF; j++)
+         {
+           if (varstr(j) == varY)
+             {
+	       truY=1;
+	       varY="Y"+string(n);
+	       break;
+	     } 
+         }
+      if (truY==0) {break;}
+  }
+ 
+ string Tvars= string(L); 
+ execute("ring RT=0,("+Tvars+","+varY+"),ds;");
+ 
+ matrix PM;
+ execute("matrix PM[nGer][nGer]=fetch("+RSName+",Pres)");
+
+ for(int i=1;i<=nGer;i++)
+   {
+     PM[i,i]=PM[i,i]+var(dimF);
+   }
+	print("");
+	print("//     PM");
+	print("//R^h------>R^h------>Ox------>0;  h = "+string(d)+", R = Local target ring with variables:("+Tvars+","+varY+").");
+	print("");
+	print(PM); 
+      
+	exportto(Top,RT);
+        exportto(Top,PM);
+	print("");
+ 	print("//TOTAL TIME = "+string(timer-tbegin)+" sec");
+	print("");
+        print("//To access the presentation matrix PM, type:  setring RT; PM; ");
+  }      
+
+
+
+

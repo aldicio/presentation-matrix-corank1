@@ -98,8 +98,8 @@ and moreover we  present a fast implementation in Maple and Singular (prescorank
 <br/>
 <br/>
 <strong>Example:</strong>
-Let $f:(\mathbb C^3,0) \to (\mathbb C^3,0)$ be defined by $f(x,y,z)=(x,y,z^6+xz+yz^2).$ 
-<br/>We have that $\frac{\mathcal O_{(\Sigma(f),0)}}{f^*\mathfrak m_{({\mathbb C}^3,0)}}\cong \frac{{\mathbb C}\{z\}}{z^5}$ and ${\mathcal O}_{(\Sigma(f),0)}$  is finitely generated as ${\mathcal O}_3$-module via $f^*$.
+Let $f:(\mathbb C^3,0)\to (\mathbb C^3,0)$ be defined by $f(x,y,z)=(x, y, z^6+xz+yz^2).$ 
+<br/>We have that $\frac{\mathcal O_{ ( \Sigma ( f ), 0 )}}{f^*\mathfrak m_{(\mathbb C^3,0)}} \cong \frac{\mathbb C\{z\}}{z^5}$ and $\mathcal O_{( \Sigma(f),0) } $  is finitely generated as $\mathcal O_3$-module via $f^*$.
 <br/>
 How to obtain the matrix of a presentation for this map?
 <br/>

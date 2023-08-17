@@ -68,9 +68,8 @@ $\mathcal O_{X,x}$ is a free  $\mathcal O_n$-module via $\widetilde{f}^*$.
 
 
 Then for all $i,j$ with $1\leq i,j \leq h$ there exist unique $\alpha_j^i \in \mathcal O_{n}$,  such that
-$$
-g_j\cdot f_{n+1}=\sum({\alpha_j^i \circ \widetilde{f}}) \cdot g_i.
-$$
+
+$g_j \cdot f_{n+1} = \sum ( { \alpha_j^i \circ \widetilde{f} } ) \cdot g_i.$
 
 As the germs $g_i$ generate $\mathcal O_{X,x}$ over $\mathcal O_{n+1}$ via $f^*$, then
 $$\lambda_j^i=\alpha_j^i \circ \pi, \ \ i\neq j$$
